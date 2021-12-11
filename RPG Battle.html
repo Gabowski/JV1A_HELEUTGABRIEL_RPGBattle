@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Battle</title>
+
+    <style>
+
+        body{
+            background: url(background\ 3.png) no-repeat;
+            background-size: cover;
+            
+        }
+
+	
+        .shadowbox{
+            display: inline-block;
+            
+            color: red; 
+            padding: 5px;
+            width: 100px;
+            height: 30px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+        }
+        
+        .lightbox{
+        display: flex;
+        flex-direction : row;
+        }
+
+        p{
+        margin : 5px 5px;
+        }
+    
+    .downbox1{
+        display: inline-block;
+
+        color: black;
+        padding: 5px;
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+        border: 3px solid black;
+        background-color: white;
+        visibility: hidden;
+
+    }
+
+    .downbox2{
+        display: inline-block;
+
+        color: #000000;
+        padding: 5px;
+        width: 510px;
+        height: 30px;
+        margin: 10px;
+        border: 3px solid black;
+        background-color: white;
+    }
+
+    .boxlightbox{
+        display: inline-block;
+
+        color: #000000;
+        padding: 5px;
+        width: 180px;
+        height: 50px;
+        margin: 10px;
+        border: 3px solid black;
+        background-color: white;
+    }
+
+    .lesdownbox{
+        display: flex;
+        align-items: flex-end;
+    }
+
+
+    
+    body{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+    }
+
+    .lesupbox{
+        display: flex;
+    }
+
+    .downbox2{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .images{
+        display: flex;
+        justify-content: space-around;
+        width: 1000px;
+        height: 500px;
+    }
+
+    .imagesheros{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+   .baliseaction{
+        display: inline-block;
+
+        color: blue;
+        padding: 5px;
+        width: 180px;
+        height: 120px;
+        margin: 10px;
+        border: 3px solid black;
+        background-color: white;
+    }
+
+    .lesmonstres{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #infohero1{
+            display: flex;
+            position : absolute;
+            left : 70px; 
+            top : 0px; 
+            color: #000000; 
+            padding: 5px;
+            width: 60px;
+            height: 30px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+            visibility: hidden;
+    }
+
+    .premierhero{
+       position: relative;
+
+    }
+
+    
+    .premierhero:hover #infohero1{
+        visibility: visible;
+
+    }
+
+    #infohero2{
+            display: flex;
+            position : absolute;
+            left : 70px; 
+            top : 0px; 
+            color: #000000; 
+            padding: 5px;
+            width: 60px;
+            height: 30px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+            visibility: hidden;
+    }
+
+    .deuxiemehero{
+        position: relative;
+    }
+
+    .deuxiemehero:hover #infohero2{
+        visibility: visible;
+    }
+
+    #infohero3{
+            display: flex;
+            position : absolute;
+            left : 70px; 
+            top : 0px; 
+            color: #000000; 
+            padding: 5px;
+            width: 60px;
+            height: 30px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+            visibility: hidden;
+    }
+
+    .troisiemehero{
+        position: relative;
+    }
+
+    .troisiemehero:hover #infohero3{
+        visibility: visible;
+    }
+
+    #infohero4{
+            display: flex;
+            position : absolute;
+            left : 70px; 
+            top : 0px; 
+            color: #000000; 
+            padding: 5px;
+            width: 65px;
+            height: 30px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+            visibility: hidden;
+    }
+
+    .quatriemehero{
+        position: relative;
+    }
+
+    .quatriemehero:hover #infohero4{
+        visibility: visible;
+    }
+
+    #infoantagoniste1{
+            display: flex;
+            position : absolute;
+            left : 70px; 
+            top : 0px; 
+            color: #000000; 
+            padding: 5px;
+            width: 75px;
+            height: 30px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+            visibility: hidden;
+    }
+
+    .antagoniste1{
+        position: relative;
+    }
+
+    .antagoniste1:hover #infoantagoniste1{
+        visibility: visible;
+    }
+
+    #infoantagoniste2{
+            display: flex;
+            position : absolute;
+            left : 70px; 
+            top : 0px; 
+            color: #000000; 
+            padding: 5px;
+            width: 75px;
+            height: 30px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+            visibility: hidden;
+    }
+
+    .antagoniste2{
+        position: relative;
+    }
+
+    .antagoniste2:hover #infoantagoniste2{
+        visibility: visible;
+    }
+
+    #infoantagoniste3{
+            display: flex;
+            position : absolute;
+            left : 70px; 
+            top : 0px; 
+            color: #000000; 
+            padding: 5px;
+            width: 75px;
+            height: 30px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+            visibility: hidden;
+    }
+
+    .antagoniste3{
+        position: relative;
+    }
+
+    .antagoniste3:hover #infoantagoniste3{
+        visibility: visible;
+    }
+
+        .LesAttaques {
+            display: inline-block;
+
+            color: black;
+            padding: 5px;
+            width: 100px;
+            height: 85px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+
+
+
+        .LesDefenses {
+            display: inline-block;
+
+            color: black;
+            padding: 5px;
+            width: 80px;
+            height: 55px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+
+        .LesSors {
+            display: inline-block;
+
+            color: black;
+            padding: 5px;
+            width: 80px;
+            height: 55px;
+            margin: 10px;
+            border: 3px solid black;
+            background-color: white;
+            visibility: hidden;
+        }
+
+    </style>
+
+<script src="RPG Battle Javascript.js" async></script>
+
+</head>
+<body>
+
+    <div class="lesupbox">
+        <div class="shadowbox">
+            <p>ATTENTION</p>
+        </div>
+        <div class="boxlightbox">
+            <p>3 ennemies de rang 11 vous attaquent !</p>
+        </div>
+    </div>
+    <div class="images">
+
+        <div class="lesmonstres">
+            <div class="antagoniste1">
+                <img src="./RPG Battle_files/Lou randomly scribbles monstre.gif" width="200" height="200">
+                <span id="infoantagoniste1">Dragan PV : 
+                    <p id ="pvdragan">150</p>
+                </span>
+            </div>
+            <div class="antagoniste2">
+                <img src="./RPG Battle_files/hellhands.png" width="200" height="200">
+                <span id="infoantagoniste2">Predrag PV : 
+                    <p id="pvpredrag">100</p>
+                </span>
+            </div>
+            <div class="antagoniste3">
+                <img src="./RPG Battle_files/Lou randomly scribbles.gif" width="200" height="200">
+                <span id="infoantagoniste3">Ruslan PV : 
+                    <p id="pvruslan">130</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="imagesheros">
+            <div class="premierhero">
+                <img src="./RPG Battle_files/bloodborne_ search results - eileen.png" width="70" height="100">
+                <span id="infohero1">Gavin PV : 
+                    <p id="pvgavin">50</p>
+                </span>
+            </div>
+            <div class="deuxiemehero">
+                <img src="./RPG Battle_files/voyageur.png" width="100" height="100">
+                <span id="infohero2">Daryl PV : 
+                    <p id="pvdaryl">30</p>
+                </span>
+            </div>
+            <div class="troisiemehero">
+                <img src="chevalier.gif" width="100" height="100">
+                <span id="infohero3">Aron PV : 
+                    <p id="pvaron">60</p>
+                </span>
+            </div>
+            <div class="quatriemehero">
+                <img src="./RPG Battle_files/strangeGhost.png" width="100" height="100">
+                <span id="infohero4">Kasper PV : 
+                    <p id="pvkasper">30</p>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="lesdownbox">
+        <div class="downbox1">
+            <p>
+                <button id="Attaque">Attaquer</button>
+            </p>
+            <p>
+                <button id="Defense">Défendre</button>
+            </p>
+            <p>
+                <button id="Magie">Magie</button>
+            </p>
+        </div>
+	    <div class="downbox2">
+            <p>Gavin</p>
+            <p id="managavin">100</p>
+            <P>Mana</P>
+            <p>Daryl</p>
+            <p id="manadaryl">100</p>
+            <p>Mana</p>
+            <p>Aron</p>
+            <p id="manaaron">100</p>
+            <p>Mana</p>
+            <p>Kasper</p>
+            <p id="manakasper">100</p>
+            <p>Mana</p>
+        </div>
+        <div class="baliseaction">
+            <p>Action :</p>
+        </div>
+        <div class="LesAttaques">
+            <p>
+                <button id="couteau">Lancer couteau</button>
+            </p>
+            <p>
+                <button id="poing">Coup de poing</button>
+            </p>
+        </div>
+        <div class="LesDefenses">
+            <p>
+                <button id="bouclier">Bouclier</button>
+            </p>
+            <p>
+                <button id="protection">Protection</button>
+            </p>
+        </div>
+        <div class="LesSors">
+            <p>
+                <button id="soins">Soins</button>
+            </p>
+            <p>
+                <button id="guerison">Guerison</button>
+            </p>
+        </div>
+    </div>
+
+
+</body>
+</html>
